@@ -4,9 +4,10 @@ phases:
         commands:
             - npm install
             - node --version
-    # build:
-    #     commands:
-    #         - npm run build
+            - ls -al
+    build:
+        commands:
+            - npm run build
 artifacts:
     # base-directory: build
     files:
