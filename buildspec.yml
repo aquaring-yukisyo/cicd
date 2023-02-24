@@ -3,8 +3,8 @@ phases:
     install:
         commands:
             - npm install
-            - node --version
-            - ls -al
+            # - node --version
+            # - ls -al
     build:
         commands:
             - npm run build
