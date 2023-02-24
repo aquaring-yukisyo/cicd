@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html/git/codedeploy/
+  - source: /build/
+    destination: /var/www/html/cicd-develop.aquaring.org/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
