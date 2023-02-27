@@ -1,0 +1,23 @@
+{
+    "family": "cicd-ecs-service",
+    "containerDefinitions": [
+        {
+            "name": "react",
+            "image": "304975792196.dkr.ecr.ap-northeast-1.amazonaws.com/cicd:latest",
+            "cpu": 10,
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000
+                }
+            ],
+            "entryPoint": [
+                "/usr/src/app",
+                "-D",
+                "FOREGROUND"
+            ],
+            "essential": true
+        }
+    ]
+}
