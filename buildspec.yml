@@ -22,4 +22,6 @@ phases:
       - docker push $REPOSITORY_URI:build
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing definitions file...
-      
+      - printf '[{"name":"react-build","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
